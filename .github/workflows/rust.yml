@@ -30,11 +30,10 @@ jobs:
 
     - run: echo $RUNNER_OS
 
-    - run: |
-      if [ "$RUNNER_OS" == "Linux" ]; then
-      sudo apt-get install libxkbcommon-x11-dev
-      fi
-      
+    - name: install linux deps
+      if: matrix.os == 'ubuntu-latest'
+      run: sudo apt-get install libxkbcommon-x11-dev
+
     - run: cargo build --release --verbose
 
     - name: Upload binaries to release
