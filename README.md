@@ -1,2 +1,2 @@
 # rust-firework
-Exemples d'utilisation des crates Rust minifb, rand &amp; palette
+Simple example of use of Rust crates *minifb*, *rand* &amp; *palette*
